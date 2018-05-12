@@ -2,15 +2,31 @@
 <html>
 <head>
 <title>Random Quote Generator</title>
-
 </head>
+<style>
+	body {
+		color: rgb(255,0,0);
+		backgroud-color: white;
+	}
+	
+	button {
+		color: rgb(255,0,0);
+	}
+	
+</style>
 <body>
 
 <h2>Random Quote Generator</h2>
 
 <p id="message"> Push the button for a quote</p>
 
-<button id="getmessage">Get Message</button>
+<button onclick="getMessage()">Get Message</button>
 
+
+<script>
+function getMessage() {
+	document.getElementById("message").innerHTML = "Hello JavaScript"; 
+}
+</script>
 </body>
 </html> 
