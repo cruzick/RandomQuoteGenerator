@@ -6,11 +6,12 @@
 <style>
 	body {
 		color: rgb(255,0,0);
-		backgroud-color: white;
+		background-color: white;
 	}
 	
 	button {
 		color: rgb(255,0,0);
+		background-color: white;
 	}
 	
 </style>
@@ -20,11 +21,22 @@
 
 <p id="message"> Push the button for a quote</p>
 
-<button onclick="getMessage()">Get Message</button>
+<em id="author">test</em>
+
+<button id="getmessage" onclick="getMessage()">Get Message</button>
 
 
 <script>
+//function that runs when button is pushed
 function getMessage() {
+	//random RGB values
+	var red = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
+    var green = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
+    var blue = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
+	//set body and buttons color to the random values generated above
+	document.body.style.color = "rgb(" + red + "," + green + "," + blue + ")";
+	document.getElementById("getmessage").style.color = "rgb(" + red + "," + green + "," + blue + ")";
+	//Changes message.  Need to switch to JSON source.
 	document.getElementById("message").innerHTML = "Hello JavaScript"; 
 }
 </script>
