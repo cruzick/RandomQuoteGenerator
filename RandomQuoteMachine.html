@@ -6,24 +6,44 @@
 <style>
 	body {
 		color: rgb(255,0,0);
-		background-color: white;
+		background-color: red;
 	}
 	
 	button {
 		color: rgb(255,0,0);
+		text-align: center;
+		margin-left: 42%;
+		margin-right:42%;
+	}
+	h2 {
+		text-align: center;
+	}
+	#quotebox {
 		background-color: white;
+		margin-left: 25%;
+		margin-right:25%;
+		min-width: 20%;
+		margin-top: 20%;
+		border-radius: 5%;
+		padding: 1%;
+	}
+	#author {
+		text-align: right;
 	}
 	
 </style>
 <body>
 
+<div id="quotebox">
+
 <h2>Random Quote Generator</h2>
 
 <p id="message"> Push the button for a quote</p>
 
-<em id="author">test</em>
+<p id="author"><em>test</em></p>
 
 <button id="getmessage" onclick="getMessage()">Get Message</button>
+</div>
 
 
 <script>
@@ -35,6 +55,7 @@ function getMessage() {
     var blue = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
 	//set body and buttons color to the random values generated above
 	document.body.style.color = "rgb(" + red + "," + green + "," + blue + ")";
+	document.body.style.background = "rgb(" + red + "," + green + "," + blue + ")";
 	document.getElementById("getmessage").style.color = "rgb(" + red + "," + green + "," + blue + ")";
 	//Changes message.  Need to switch to JSON source.
 	document.getElementById("message").innerHTML = "Hello JavaScript"; 
